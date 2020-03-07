@@ -18,8 +18,6 @@
         <a href="{% url 'get-mclaren-page' %}"><img src="{% static 'assets/MclarenLogo.jpg' %}" class=" pt-5 w-50 h-50"></a>
         <a href="{% url 'get-bugatti-page' %}"><img src="{% static 'assets/BugattiLogo.png' %}" class=" pt-5 w-50 h-50"></a>
         {% if request.user.profile.is_passenger %}
-        <button class="btn btn-primary" formaction="{% url 'list-rides-page' %}">Available Rides</button>
-        {% else %}
         {% endif %}
         </center>
     </form>

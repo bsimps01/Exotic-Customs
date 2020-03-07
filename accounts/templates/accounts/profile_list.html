@@ -1,42 +1,24 @@
 {% extends 'base.html' %}
 
-{% block title %}Bugatti{% endblock %}
+{% block title %}Exotic Customs{% endblock %}
 
 {% block content %}
-    {% if request.user.profile.is_passenger %}
-        {% if profiles %}
-        <h4><center>Bugatti</center></h4>
 
-            {% for profile in profiles %}
+        <h4><center>About Us</center></h4>
+
             <a href="#" class="list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1"><b>{{ profile.profile.user }}</b></h5>
-                <small class="text-muted">{{ profile.timestamp }}</small>
-                </div>
-                <p class="mb-1"><img src="" style="height: 75px; width: auto"><br>Starting: {{ profile.profile.starting }}</p>
-
-                <p class="mb-1"><img src="" style="height: 75px; width: auto"><br>Going: {{ profile.profile.destination }}</p>
-                <br>
-                <small> <a href="{% url 'confirm-page' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Request</a>
-                </small>
+                <p>
+                        Exotics Customs gives you the opportunity to experience the adrenaline rush of driving the coolest supercars 
+                        on the planet on our exclusive racetrack that was professionally designed to get the most out of our award 
+                        winning fleet. Take the wheel of these incredible machines and push their performance to the limit with one-on-one 
+                        coaching from our team of professional racing instructors. There is no feeling that compares to driving a supercar for 
+                        the first time and we make sure your experience is unforgettable from start to finish! Exotics Racing is the original 
+                        supercar experience and offers a commitment to excellence that is unrivaled, offering the highest level of safety and 
+                        service in the industry.
+                </p>
                 <hr class="breakline">
-            {% endfor %}
-        {% else %}
-            <div class="alert alert-primary" role="alert">Currently there are no drivers</div>
 
-        {% endif %}
-
-    {% else %}
-    <h1> Thanks for being a driver</h1>
-    <br><br>
-    <a href="{% url 'get-ride-page' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Edit Your Route</a>
-    <!-- Button with a list of riders -->
-
-    <a href="{% url 'get-riders-page' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">View Hitchers</a>
-    <br>
-
-
-    {% endif %}
-    
+ 
 
 {% endblock %}

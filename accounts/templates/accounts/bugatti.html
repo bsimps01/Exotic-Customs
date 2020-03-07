@@ -5,13 +5,32 @@
 {% block content %}
 <h1><center>Bugatti</center></h1>
 
-{% for car in cars %}
-            <a href="#" class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1"><b></b></h5>
+<center><div class="d-flex justify-content-between"></center>
+    <h5 class="mb-1"><b>Bugatti Divo</b></h5>
+    <a href=""><img src="{% static 'assets/Bugatti_Divo.jpg' %}" class="  w-100 h-100"></a>
+    </div>
+    <br>
+    <a href="{% url 'confirm-page' %}"><small><button>Get Car</button></small></a>
+    <hr class="breakline">
+    <center><div class="d-flex justify-content-between"></center>
+        <h5 class="mb-1"><b>Bugatti Chiron Super Sport 300</b></h5>
+        <a href=""><img src="{% static 'assets/2021-bugatti-chiron-super-sport-300.jpg' %}" class="w-100 h-100"></a>
+        </div>
+        <br>
+        <a href="{% url 'confirm-page' %}"><small><button>Get Car</button></small></a>
+        <hr class="breakline">
+        <center><div class="d-flex justify-content-between"></center>
+            <h5 class="mb-1"><b>Bugatti Veyron 16.4 Super Sport</b></h5>
+            <a href=""><img src="{% static 'assets/BugattiVeyron16_4SuperTurbo.jpg' %}" class="w-100 h-100"></a>
+            </div>
+            <br>
+            <a href="{% url 'confirm-page' %}"><small><button>Get Car</button></small></a>
+            <hr class="breakline">
+            <center><div class="d-flex justify-content-between"></center>
+                <h5 class="mb-1"><b>Bugatti La Voiture Noire</b></h5>
+                <a href=""><img src="{% static 'assets/BugattiLaVoiture.jpg' %}" class="w-100 h-100"></a>
                 </div>
                 <br>
-                <small><button>Get Car</button></small>
+                <a href="{% url 'confirm-page' %}"><small><button>Get Car</button></small></a>
                 <hr class="breakline">
-{% endfor %}
 {% endblock %}

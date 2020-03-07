@@ -51,12 +51,9 @@
 
                 <ul class="navbar-nav mr-auto">
                       <li class="nav-item">
-                        <a class="nav-link" href="{% url 'get-ride-page' %}">Get/Give Ride<span class="sr-only"></span></a>
+                        <a class="nav-link" href="{% url 'about-us-page' %}">About Us<span class="sr-only"></span></a>
                       </li>
                       {% if request.user.profile.is_passenger %}
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'list-rides-page' %}">Available Rides<span class="sr-only"></span></a>
-                      </li>
                       {% else %}
                       {% endif %}
                       <li class="nav-item">

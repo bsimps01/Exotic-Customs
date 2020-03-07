@@ -4,14 +4,33 @@
 
 {% block content %}
 <h1><center>McLaren</center></h1>
-
-{% for car in cars %}
-            <a href="#" class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1"><b></b></h5>
+    
+    <center><div class="d-flex justify-content-between"></center>
+    <h5 class="mb-1"><b>McLaren F1</b></h5>
+    <a href=""><img src="{% static 'assets/MclarenF1.png' %}" class="  w-100 h-100"></a>
+    </div>
+    <br>
+    <a href="{% url 'confirm-page' %}"><small><button>Get Car</button></small></a>
+    <hr class="breakline">
+    <center><div class="d-flex justify-content-between"></center>
+        <h5 class="mb-1"><b>McLaren Roadster</b></h5>
+        <a href=""><img src="{% static 'assets/MclarenRoadster.jpeg' %}" class="w-100 h-100"></a>
+        </div>
+        <br>
+        <a href="{% url 'confirm-page' %}"></a><small><button>Get Car</button></small></a>
+        <hr class="breakline">
+        <center><div class="d-flex justify-content-between"></center>
+            <h5 class="mb-1"><b>McLaren Senna</b></h5>
+            <a href=""><img src="{% static 'assets/MclarenSenna.jpg' %}" class="w-100 h-100"></a>
+            </div>
+            <br>
+            <a href="{% url 'confirm-page' %}"><small><button>Get Car</button></small></a>
+            <hr class="breakline">
+            <center><div class="d-flex justify-content-between"></center>
+                <h5 class="mb-1"><b>McLaren 720S</b></h5>
+                <a href=""><img src="{% static 'assets/McLaren720.jpg' %}" class="w-100 h-100"></a>
                 </div>
                 <br>
-                <small><button>Get Car</button></small>
+                <a href="{% url 'confirm-page' %}"><small><button>Get Car</button></small></a>
                 <hr class="breakline">
-{% endfor %}
 {% endblock %}

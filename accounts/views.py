@@ -43,10 +43,10 @@ def update_profile(request):
         'profile_form': profile_form
     })
 
-class ProfilesListView(ListView):
+class AboutUs(ListView):
 
     def get(self, request):
-        cars = User.objects.filter(profile__is_passenger=False)
+        cars = User.objects.filter
         return render(request, 'accounts/profile_list.html', {'profiles': cars})
 
 class Ferrari(CreateView):
