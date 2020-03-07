@@ -1,0 +1,48 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+
+<div class="container-fluid">
+
+    <form>
+        <center>
+            <h3>Choose your brand</h3>
+        <a href="{% url 'get-rides-page' %}"><img src="{% static 'assets/FerrariLogo.jpg' %}" class=" pt-5 w-50 h-50"></a>
+        <a href=""><img src="{% static 'assets/LamborghiniLogo.jpg' %}" class=" pt-5 w-50 h-50"></a>
+        <a href=""><img src="{% static 'assets/MclarenLogo.jpg' %}" class=" pt-5 w-50 h-50"></a>
+        <a href=""><img src="{% static 'assets/BugattiLogo.png' %}" class=" pt-5 w-50 h-50"></a>
+        {% if request.user.profile.is_passenger %}
+        <button class="btn btn-primary" formaction="{% url 'list-rides-page' %}">Available Rides</button>
+        {% else %}
+        {% endif %}
+        </center>
+    </form>
+
+    <!-- FOOTER -->
+    </div>
+
+{% else %}
+
+    <center><h3>Welcome to Exotic Customs</h3></center>
+    <!-- Has to be an <a> for linking towork</a> -->
+
+    <form>
+        <center>
+        <button class="btn btn-info" formaction="{% url 'login' %}">Log in</button>
+        <button class="btn btn-info" formaction="{% url 'signup-page' %}">Sign up</button><br>
+        <center><a href=""><img src="{% static 'assets/McLaren.jpg' %}" class=" pt-5 w-100 h-100"></a></center>
+        </center>
+
+    </form>
+{% endif %}
+
+
+
+
+{% endblock %}

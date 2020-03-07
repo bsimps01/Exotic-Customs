@@ -13,20 +13,11 @@ from django.contrib.auth.models import User
 
 
 class SignUpView(CreateView):
-    
-    
-    # def get(self, request):
   form_class = UserCreateForm
   success_url = reverse_lazy('login')
-  
-  # This works because using the CreatView and using template name with it to show the page
   template_name = 'registration/signup.html'
-        # return render(request, template_name, {
-        #   'form': form_class
-        # })
 
-
-class Sayhi(CreateView):
+class Foundation(CreateView):
   def get(self, request):
       return render(request, "base.html")
 
@@ -35,12 +26,7 @@ class Homepage(CreateView):
         return render(request, "accounts/home.html")
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
-
-# def update_profile(request, user_id):
-#     user = User.objects.get(pk=user_id)
-#     user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
-#     user.save()
+    return HttpResponse("Hello, world. You're at the best website here")
 
 def update_profile(request):
     if request.method == 'POST':
@@ -60,16 +46,16 @@ def update_profile(request):
 class ProfilesListView(ListView):
 
     def get(self, request):
-        riders = User.objects.filter(profile__is_passenger=False)
-        return render(request, 'accounts/profile_list.html', {'profiles': riders})
+        cars = User.objects.filter(profile__is_passenger=False)
+        return render(request, 'accounts/profile_list.html', {'profiles': cars})
 
-class GetRiders(CreateView):
+class Ferrari(CreateView):
 
     def get(self, request):
-        riders = User.objects.filter(profile__is_passenger=True)
-        return render(request, 'accounts/riders.html', {'riders': riders})
+        cars = User.objects.filter
+        return render(request, 'accounts/riders.html', {'riders': cars})
 
-    def login_view_profile(request):
+def login_view_profile(request):
         user = request.user
         args = {'user': user}
         return render(request, 'accounts/account.html', args)
