@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Exotic Customs{% endblock %}
+
+{% block content %}
+<h1><center>McLaren</center></h1>
+
+{% for car in cars %}
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><b></b></h5>
+                </div>
+                <br>
+                <small><button>Get Car</button></small>
+                <hr class="breakline">
+{% endfor %}
+{% endblock %}

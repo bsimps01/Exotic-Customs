@@ -53,7 +53,25 @@ class Ferrari(CreateView):
 
     def get(self, request):
         cars = User.objects.filter
-        return render(request, 'accounts/riders.html', {'riders': cars})
+        return render(request, 'accounts/ferrari.html', {'ferrari': cars})
+
+class Bugatti(CreateView):
+
+    def get(self, request):
+        cars = User.objects.filter
+        return render(request, 'accounts/bugatti.html', {'bugatti': cars})
+
+class McLaren(CreateView):
+
+    def get(self, request):
+        cars = User.objects.filter
+        return render(request, 'accounts/mclaren.html', {'mclaren': cars})
+
+class Lamborghini(CreateView):
+
+    def get(self, request):
+        cars = User.objects.filter
+        return render(request, 'accounts/lamborghini.html', {'lamborghini': cars})
 
 def login_view_profile(request):
         user = request.user

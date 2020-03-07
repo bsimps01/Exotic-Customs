@@ -14,9 +14,9 @@
         <center>
             <h3>Choose your brand</h3>
         <a href="{% url 'get-rides-page' %}"><img src="{% static 'assets/FerrariLogo.jpg' %}" class=" pt-5 w-50 h-50"></a>
-        <a href=""><img src="{% static 'assets/LamborghiniLogo.jpg' %}" class=" pt-5 w-50 h-50"></a>
-        <a href=""><img src="{% static 'assets/MclarenLogo.jpg' %}" class=" pt-5 w-50 h-50"></a>
-        <a href=""><img src="{% static 'assets/BugattiLogo.png' %}" class=" pt-5 w-50 h-50"></a>
+        <a href="{% url 'get-lamborghini-page' %}"><img src="{% static 'assets/LamborghiniLogo.jpg' %}" class=" pt-5 w-50 h-50"></a>
+        <a href="{% url 'get-mclaren-page' %}"><img src="{% static 'assets/MclarenLogo.jpg' %}" class=" pt-5 w-50 h-50"></a>
+        <a href="{% url 'get-bugatti-page' %}"><img src="{% static 'assets/BugattiLogo.png' %}" class=" pt-5 w-50 h-50"></a>
         {% if request.user.profile.is_passenger %}
         <button class="btn btn-primary" formaction="{% url 'list-rides-page' %}">Available Rides</button>
         {% else %}
